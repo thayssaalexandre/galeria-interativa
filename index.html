@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Interativa</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>✦ ☾ ✦ Galeria Harry Potter ✦ ☾ ✦</h1>
+        <p>Clique em uma imagem para ampliar</p>
+    </header>
+
+    <nav class="filtros">
+        <button class="filtro ativo" data-filtro="todos">Todos</button>
+        <button class="filtro" data-filtro="harryPotter">Harry Potter</button>
+        <button class="filtro" data-filtro="hermioneGranger">Hermione Granger</button>
+        <button class="filtro" data-filtro="ronWeasley">Ron Weasley</button>
+    </nav>
+
+    <p id="totalImagens" class="total"></p>
+
+    <main class="galeria">
+        <img src="./assets/destaque.jpg" alt="Hogwarts" data-categoria="todos" data-descricao="Castelo de Hogwarts aparece cercado por montanhas e por um grande lago. O céu alaranjado e dourado ilumina as torres, criando uma paisagem mágica que representa o universo de Harry Potter." class="miniatura destaque" tabindex="0">
+        
+        <img src="./assets/ronhorizontal.jpg" alt="Ron Weasley" class="miniatura horizontal" data-categoria="ronWeasley" data-descricao="Rony Weasley em um ambiente interno, abrindo um pequeno pacote enquanto veste seu suéter de tricô com a letra 'R'." tabindex="0">
+        
+        <img src="./assets/harry1.jpg" alt="Harry Potter" class="miniatura" data-categoria="harryPotter" data-descricao="Harry Potter mais velho, com óculos redondos e pequenos arranhões no rosto, vestindo uma jaqueta escura." tabindex="0">
+        
+        <img src="./assets/hermionevertical.jpg" alt="Hermione Granger" class="miniatura vertical" data-categoria="hermioneGranger" data-descricao="Hermione Granger sentada ao ar livre, vestindo o uniforme escolar com o brasão da Grifinória e gravata vermelha e amarela." tabindex="0">
+        
+        <img src="./assets/harry2.jpg" alt="Harry Potter" class="miniatura" data-categoria="harryPotter" data-descricao="Um Harry Potter ainda criança, sorrindo largo com os dentes à mostra, usando uma camisa xadrez." tabindex="0">
+        
+        <img src="./assets/triohorizontal1.jpg" alt="Trio de Ouro" class="miniatura horizontal" data-categoria="todos" data-descricao="Harry, Hermione e Rony sentados juntos ao ar livre, usando uniformes e cachecóis da Grifinória, com expressões alegres." tabindex="0">
+        
+        <img src="./assets/ronminiatura.jpg" alt="Ron Weasley" class="miniatura" data-categoria="ronWeasley" data-descricao="Rony Weasley sorrindo, usando um gorro com tranças coloridas e uma blusa estampada, segurando um pequeno objeto nas mãos." tabindex="0">
+        
+        <img src="./assets/hermioneminiatura.jpg" alt="Hermione Granger" class="miniatura" data-categoria="hermioneGranger" data-descricao="Hermione Granger jovem, com cabelo cacheado e volumoso, olhando levemente sorridente para a câmera." tabindex="0">
+        
+        <img src="./assets/triohorizontal2.jpg" alt="Trio de Ouro" class="miniatura horizontal" data-categoria="todos" data-descricao="Rony, Hermione e Harry lado a lado em um ambiente escuro, iluminados pelo brilho de velas à frente." tabindex="0">
+    </main>
+
+    <div id="modal" class="modal">
+        <button id="fechar" class="fechar">&times;</button>
+        
+        <button id="anterior" class="navegacao anterior">&#10094;</button>
+
+        <div class="modal-conteudo">
+            <img src="" alt="" id="imagemModal">
+            <div class="legenda">
+                <span id="contador"></span>
+                <span id="nomeImagem"></span>
+                <p id="descricaoImagem"></p>
+            </div>
+        </div>
+
+        <button id="proximo" class="navegacao proximo" aria-label="Proxima Imagem">&#10095;</button>
+    </div> 
+    
+    <script src="script.js"></script>
+</body>
+</html>
